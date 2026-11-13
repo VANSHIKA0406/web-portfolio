@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vanshika | Textile Design Portfolio</title>
-<style>
+/* Shared tokens and original portfolio styles. */
 :root {
   --site-primary: #e52d27;
   --site-on-primary: #ffffff;
@@ -136,7 +130,7 @@ h2.section-title { font-family:var(--site-font-heading); font-size:clamp(2.5rem,
 @media(max-width:540px) { .nav-links a:not(.contact-nav) { display:none; } .nav-links { gap:10px; } .nav-links .contact-nav { font-size:.75rem; } .art-stage { min-height:390px; } .cart { transform:scale(.84) rotate(-4deg); } .paper-shape { width:120px; height:160px; } .swatch { transform:scale(.8) rotate(-17deg)!important; } .section-head { display:block; } .section-note { margin-top:15px; } .project-grid { grid-template-columns:1fr; } .project-art { height:260px; } .timeline-item { grid-template-columns:1fr; gap:7px; } .footer { flex-direction:column; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { transition:none!important; } }
 @media print { .site-nav,.hero-actions,.filters,.project-arrow,.contact .pill-button,.modal-backdrop,.toast { display:none!important; } body,#app,.work-section,.contact { background:white!important; color:black!important; } .hero { padding:20px 0; } .art-stage { display:none; } .hero { display:block; } .project-grid { grid-template-columns:repeat(2,1fr); } .section,.contact { padding:25px 0; } .contact p { color:#333; } .contact h2 { font-size:38pt; } .contact h2 em { color:#333; } .project-card { break-inside:avoid; } }
-/* Cart-only experience: one object, six clickable compartments. */
+/* Alternate cart prototype styles (hidden in the current page composition). */
 :root {
   --site-background: #d5d2ca;
   --site-primary: #e3262e;
@@ -261,7 +255,7 @@ body, #app { background-color: var(--site-background); }
   .cart-topline { letter-spacing: .06em; }
   .cart-wheel { width: 42px; height: 42px; bottom: 3px; border-width: 7px; }
 }
-/* Full-page textile trolley concept */
+/* Current CV trolley and receipt styles. */
 :root { --site-background:#e5e0d6; --site-primary:#e32632; --site-secondary:#f3d64e; }
 body, #app { background:#e5e0d6; }
 .site-nav, #cart-only, #app > main, #app > .footer { display:none !important; }
@@ -321,7 +315,7 @@ body, #app { background:#e5e0d6; }
 @media(max-width:700px) { .cart-page-heading { align-items:start; flex-direction:column; }.cart-page-heading p { text-align:left; }.trolley-scene { padding:30px 0 40px; }.trolley-frame { padding:7px; border-width:4px; border-radius:12px 14px 22px 14px; }.trolley-inner { padding:8px; }.textile-inventory { gap:7px; }.textile-item { min-height:158px; padding:7px; }.item-visual { height:80px; margin:17px 0 9px; }.textile-item:after { font-size:.38rem; right:4px; top:4px; padding:3px; }.item-caption { font-size:.48rem; }.trolley-lower { letter-spacing:.04em; }.cart-page-footer { line-height:1.5; } }
 @media(max-width:430px) { .cart-header-note { max-width:120px; line-height:1.45; }.textile-item { min-height:137px; }.item-visual { height:65px; }.spool { height:53px; width:20px; }.spool:nth-child(2) { height:45px; }.spool:nth-child(3) { height:58px; }.spool:before,.spool:after { width:23px; }.yarn-ball { width:59px; height:57px; }.trolley-wheel { border-width:7px; } }
 @media print { body * { visibility:hidden!important; } #billModal,#billModal * { visibility:visible!important; } #billModal { position:absolute; display:block!important; inset:0; background:#fff!important; padding:0; } .cv-bill { max-height:none; overflow:visible; box-shadow:none; width:100%; border:0; }.bill-actions,.bill-close { display:none!important; } }
-/* Art-directed finish: textile collage and a proper checkout receipt */
+/* Final visual overrides for the current trolley and receipt. */
 #cart-page { background:#11a9d0; isolation:isolate; }
 #cart-page:before { opacity:.22; background-image:radial-gradient(rgba(255,255,255,.8) .8px,transparent .8px); background-size:6px 6px; }
 #cart-page:after { content:''; position:absolute; z-index:-1; inset:0; pointer-events:none; background:linear-gradient(112deg,#225c27 0 14%,transparent 14% 100%),linear-gradient(164deg,transparent 0 66%,#ffcf28 66% 100%); }
@@ -384,206 +378,34 @@ body, #app { background:#e5e0d6; }
 @media(max-width:430px) { .trolley-scene:before { top:1%; left:0; }.trolley-scene:after { top:0; right:0; }.trolley-topline { letter-spacing:.05em; }.cart-page-footer { align-items:flex-start; gap:7px; }.cart-page-footer span { max-width:49%; } }
 .skill-sticker-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 @media(max-width:420px) { .skill-sticker-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.skill-sticker { min-height:82px; } }
-</style>
-</head>
-<body>
-<div id="app">
-  <section id="cart-page" aria-label="Vanshika's textile design CV shopping cart">
-    <header class="cart-page-header"><div class="cart-wordmark">VANSHIKA MAKHEJA <span>●</span> TEXTILE DESIGN</div><div class="cart-header-note">TEXTILE DESIGN · HOME ACCESSORIES<br>NIFT NEW DELHI · 2024–2028</div></header>
-    <div class="cart-page-heading"><h1>Good ideas.<br>Great <span>textiles.</span></h1><p>Textiles, print, surface exploration and visual storytelling. Pick an item from Vanshika's creative cart to explore her CV by receipt.</p></div>
-    <div class="trolley-scene"><div class="trolley-handle" aria-hidden="true"></div><div class="trolley-frame"><div class="trolley-inner">
-      <div class="trolley-topline"><span>THE TEXTILE EDIT</span><span>6 CREATIVE PICKS · TAP TO OPEN BILL ↗</span></div>
-      <div class="textile-inventory">
-        <button class="textile-item fabric-card" type="button" data-item="Profile" data-section="PROFILE" aria-label="Open profile section of CV bill"><span class="item-visual" aria-hidden="true"></span><span class="item-name">PROFILE</span><span class="item-caption">Meet the designer</span><span class="item-number">01</span></button>
-        <button class="textile-item thread-card" type="button" data-item="Skills and tools" data-section="SKILLS" aria-label="Open skills and tools section of CV bill"><span class="item-visual" aria-hidden="true"><span class="spools"><i class="spool"></i><i class="spool"></i><i class="spool"></i></span></span><span class="item-name">SKILLS &<br>TOOLS</span><span class="item-caption">Hand + digital</span><span class="item-number">02</span></button>
-        <button class="textile-item yarn-card" type="button" data-item="Education" data-section="EDUCATION" aria-label="Open education section of CV bill"><span class="item-visual" aria-hidden="true"><span class="yarn-ball"></span></span><span class="item-name">EDUCATION</span><span class="item-caption">Learning journey</span><span class="item-number">03</span></button>
-        <button class="textile-item scissor-card" type="button" data-item="Experience and activities" data-section="EXPERIENCE" aria-label="Open experience section of CV bill"><span class="item-visual" aria-hidden="true"><span class="scissor-symbol">✂</span></span><span class="item-name">EXPERIENCE</span><span class="item-caption">Work & activities</span><span class="item-number">04</span></button>
-        <button class="textile-item swatchbook-card" type="button" data-item="Selected projects" data-section="PROJECTS" aria-label="Open selected projects section of CV bill"><span class="item-visual" aria-hidden="true"><span class="mini-swatches"><span></span><span></span><span></span></span></span><span class="item-name">PROJECTS</span><span class="item-caption">Selected work</span><span class="item-number">05</span></button>
-        <button class="textile-item pattern-card" type="button" data-item="Contact details" data-section="CONTACT" aria-label="Open contact details section of CV bill"><span class="item-visual" aria-hidden="true"><span class="pattern-sheet"></span></span><span class="item-name">CONTACT</span><span class="item-caption">Get in touch</span><span class="item-number">06</span></button>
-      </div><div class="trolley-lower"><span>COLOUR · CRAFT · CURIOSITY</span><strong>CHECK OUT YOUR CV ↗</strong></div>
-    </div></div><div class="trolley-underframe" aria-hidden="true"></div><div class="trolley-wheels" aria-hidden="true"><span class="trolley-wheel"></span><span class="trolley-wheel"></span></div></div>
-    <footer class="cart-page-footer"><span>HANDLE IDEAS WITH CARE ✳</span><span>SELECT ANY TEXTILE TO OPEN THE RECEIPT</span></footer>
-  </section>
-  <nav class="site-nav" aria-label="Main navigation">
-    <a class="brand" href="#top" style="color:inherit;text-decoration:none"><span class="brand-mark">V.</span> VANSHIKA <span style="font-weight:400;color:var(--muted)">/ TEXTILE DESIGN</span></a>
-    <div class="nav-links"><a href="#work">Selected work</a><a href="#about">About</a><a class="contact-nav" href="#contact">Let's connect ↗</a></div>
-  </nav>
-  <section id="cart-only" aria-label="Vanshika's interactive textile design cart">
-    <div class="cart-object">
-      <div class="cart-handle" aria-hidden="true"></div>
-      <div class="cart-shell">
-        <div class="cart-topline"><span>VANSHIKA'S CREATIVE CART</span><span>SELECT A SAMPLE ↓</span></div>
-        <div class="cart-content">
-          <div class="cart-products">
-            <button class="cart-tile tile-pink" type="button" data-type="ABOUT THE MAKER" data-title="About Vanshika" data-desc="A personal introduction to Vanshika, her textile-design interests and the ideas that shape her creative approach. Replace this starter copy with her own story." data-tools="Introduction · Education · Design interests"><span class="tile-num">01 / ORIGINAL</span><span class="tile-symbol">◉</span><strong>ABOUT<br>THE MAKER</strong></button>
-            <button class="cart-tile tile-yellow" type="button" data-type="PRINT & PATTERN" data-title="Design Lab" data-desc="A space for textile prints, repeat patterns, motif explorations and surface experiments. Add Vanshika's own project images and process work here." data-tools="Prints · Patterns · Colourways"><span class="tile-num">02 / PATTERN POP</span><span class="tile-symbol">▨</span><strong>DESIGN<br>LAB</strong></button>
-            <button class="cart-tile tile-blue" type="button" data-type="MADE BY HAND" data-title="Craft Corner" data-desc="Showcase hands-on textile work, fabric sampling, material studies, embroidery, weaving, dye experiments or other techniques she has actually practised." data-tools="Textile techniques · Sampling · Material studies"><span class="tile-num">03 / MADE BY HAND</span><span class="tile-symbol">✳</span><strong>CRAFT<br>CORNER</strong></button>
-            <button class="cart-tile tile-red" type="button" data-type="WORDS & STORIES" data-title="Content Studio" data-desc="Project stories, creative briefs and concise notes explaining the thinking behind each collection. Use this space to tell the story of her real work." data-tools="Concept notes · Visual storytelling · Documentation"><span class="tile-num">04 / WORDS</span><span class="tile-symbol">✎</span><strong>CONTENT<br>STUDIO</strong></button>
-            <button class="cart-tile tile-green" type="button" data-type="SKILLS & TOOLS" data-title="The Toolbox" data-desc="A tailored list of textile skills, techniques and software. Keep only the tools and abilities Vanshika can confidently demonstrate." data-tools="Software · Textile techniques · Research methods"><span class="tile-num">05 / TOOLKIT</span><span class="tile-symbol">✂</span><strong>THE<br>TOOLBOX</strong></button>
-            <button class="cart-tile tile-cream" type="button" data-type="CONTACT" data-title="Contact Slot" data-desc="Add Vanshika's preferred email, phone number, portfolio link or professional profile here before sharing the CV." data-tools="Email · Portfolio · Professional links"><span class="tile-num">06 / NEXT?</span><span class="tile-symbol">↗</span><strong>CONTACT<br>SLOT</strong></button>
-          </div>
-          <aside class="cart-controls" aria-label="Decorative cart controls">
-            <div class="coin-slot" aria-hidden="true">₹</div><div class="controls-label">INSERT<br>CURIOSITY</div>
-            <div class="keypad" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
-            <div class="mini-display">READY_<br>SELECT A<br>PRODUCT</div>
-            <div class="pickup-tray">PICK-UP TRAY</div>
-          </aside>
-        </div>
-        <div class="cart-base"><span>HANDLE IDEAS WITH CARE</span><span>OBJECT NO. 001</span></div>
-      </div>
-      <div class="cart-wheel left" aria-hidden="true"></div><div class="cart-wheel right" aria-hidden="true"></div>
-    </div>
-  </section>
-  <main>
-    <section class="hero" id="top">
-      <div>
-        <div class="eyebrow">Textile design · Surface stories</div>
-        <h1>Making<br>fabric feel<br><em>like a feeling.</em></h1>
-        <p class="hero-copy">Hi, I’m <strong>Vanshika</strong>, a textile-design creative exploring colour, pattern and material. I turn little observations into tactile stories, thoughtful prints and surfaces with a point of view.</p>
-        <div class="hero-actions"><a class="pill-button" href="#work" style="text-decoration:none">Explore my work ↓</a><button class="pill-button" id="printBtn" type="button">Print CV ↗</button><a class="text-link" href="#about">A little about me</a></div>
-        <div class="hero-meta"><div><span class="meta-number">01</span><span class="meta-label">Colour with purpose</span></div><div><span class="meta-number">02</span><span class="meta-label">Pattern with a pulse</span></div><div><span class="meta-number">∞</span><span class="meta-label">Ideas in progress</span></div></div>
-      </div>
-      <div class="art-stage" aria-label="Playful shopping cart holding a textile design receipt and fabric swatches">
-        <div class="paper-shape"></div><div class="swatch one"></div><div class="swatch two"></div><div class="swatch three"></div>
-        <div class="sticker">GOOD IDEAS<br>IN THE BAG ✳</div>
-        <div class="cart"><div class="cart-handle"></div><div class="cart-basket"><div class="cart-grid"></div></div>
-          <div class="receipt"><div class="receipt-kicker">Vanshika's studio · No. 001</div><h2>Texture.<br>Colour.<br><span>Curiosity.</span></h2><div class="receipt-line"></div><div class="receipt-row"><span>PRINT STORIES</span><span>01</span></div><div class="receipt-row"><span>COLOUR STUDIES</span><span>02</span></div><div class="receipt-row"><span>SURFACE EXPERIMENTS</span><span>03</span></div><div class="receipt-line"></div><div class="receipt-row"><strong>TOTAL IDEAS</strong><strong>∞</strong></div><div class="receipt-stamp">MADE WITH INTENTION ✓</div></div>
-          <div class="wheel"></div><div class="wheel right"></div>
-        </div><div class="sticker blue">TEXTILE<br>THINKER ↗</div>
-      </div>
-    </section>
-    <section class="section work-section" id="work">
-      <div class="section-head"><div><div class="section-kicker">The creative checkout</div><h2 class="section-title">Selected work<span style="color:var(--site-primary)">.</span></h2></div><p class="section-note">A little sample rack of the things I love making. Tap any project to peek at the story behind it.</p></div>
-      <div class="filters" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all">Everything</button><button class="filter" data-filter="print">Print & pattern</button><button class="filter" data-filter="surface">Surface & material</button><button class="filter" data-filter="research">Research & colour</button></div>
-      <div class="project-grid" id="projectGrid">
-        <button class="project-card" data-category="print" data-title="Botanical Daydreams" data-type="Print & pattern" data-desc="A playful repeat-print exploration inspired by leaves, pressed flowers and imperfect garden shapes. The palette balances warm coral, leaf green and butter yellow." data-tools="Motif development · Repeat layout · Colourway exploration">
-          <div class="project-art" style="background:#e9b5a9"><svg viewBox="0 0 320 235" aria-hidden="true"><rect width="320" height="235" fill="#e9b5a9"/><g fill="#32674b" stroke="#32674b" stroke-width="2"><path d="M30 30 Q70 70 42 110 Q7 85 30 30Z"/><path d="M100 140 Q148 110 158 160 Q130 192 100 140Z"/><path d="M240 20 Q285 35 263 80 Q220 60 240 20Z"/><path d="M240 150 Q285 150 286 195 Q240 203 240 150Z"/></g><g fill="#f4ce51"><circle cx="100" cy="48" r="17"/><circle cx="195" cy="92" r="22"/><circle cx="60" cy="200" r="14"/><circle cx="292" cy="115" r="12"/></g><g fill="#d64f43"><path d="M145 20 C110 50 155 65 145 95 C180 65 180 45 145 20Z"/><path d="M190 155 C160 175 195 198 190 220 C225 193 225 175 190 155Z"/></g><g stroke="#fff4df" stroke-width="3" fill="none"><path d="M30 30 Q65 78 42 110 M240 20 Q250 54 263 80 M100 140 Q130 165 158 160"/></g></svg></div><div class="project-info"><div class="project-topline"><span class="project-category">Print & pattern</span><span class="project-arrow">↗</span></div><h3>Botanical Daydreams</h3><p>Organic motifs, sunny colour and a little garden energy.</p></div>
-        </button>
-        <button class="project-card" data-category="surface" data-title="Tactile Topography" data-type="Surface & material" data-desc="A material-led study of raised lines, layered forms and shadows. This concept explores how a textile can invite touch before the eye has worked out the pattern." data-tools="Texture sampling · Material exploration · Hand techniques">
-          <div class="project-art" style="background:#e6d9c6"><svg viewBox="0 0 320 235" aria-hidden="true"><rect width="320" height="235" fill="#e6d9c6"/><g fill="none" stroke-linecap="round"><path d="M-10 30 Q80 -10 120 55 T240 45 T340 25" stroke="#b66c4f" stroke-width="15"/><path d="M-10 60 Q80 20 120 85 T240 75 T340 55" stroke="#f5bf72" stroke-width="15"/><path d="M-10 90 Q80 50 120 115 T240 105 T340 85" stroke="#6c8b7a" stroke-width="15"/><path d="M-10 120 Q80 80 120 145 T240 135 T340 115" stroke="#b66c4f" stroke-width="15"/><path d="M-10 150 Q80 110 120 175 T240 165 T340 145" stroke="#f5bf72" stroke-width="15"/><path d="M-10 180 Q80 140 120 205 T240 195 T340 175" stroke="#6c8b7a" stroke-width="15"/></g><rect x="220" y="25" width="72" height="68" fill="#fff7e8" opacity=".45" transform="rotate(10 220 25)"/></svg></div><div class="project-info"><div class="project-topline"><span class="project-category">Surface & material</span><span class="project-arrow">↗</span></div><h3>Tactile Topography</h3><p>Layered texture studies made to be felt, not just seen.</p></div>
-        </button>
-        <button class="project-card" data-category="research" data-title="A Colour Field Guide" data-type="Research & colour" data-desc="A compact colour story built from everyday references: sun-faded walls, market flowers, old books and late-afternoon light. The goal is a palette that feels lived-in, not over-polished." data-tools="Visual research · Colour mapping · Moodboard building">
-          <div class="project-art" style="background:#f3d35b"><svg viewBox="0 0 320 235" aria-hidden="true"><rect width="320" height="235" fill="#f3d35b"/><g transform="rotate(-7 160 117)"><rect x="45" y="26" width="230" height="185" fill="#fff8e9"/><rect x="60" y="42" width="82" height="69" fill="#d55c4b"/><rect x="151" y="42" width="105" height="32" fill="#2e6b50"/><rect x="151" y="82" width="105" height="29" fill="#8ab8bf"/><rect x="60" y="120" width="55" height="68" fill="#e7bca6"/><rect x="124" y="120" width="60" height="68" fill="#6b4a3c"/><rect x="193" y="120" width="63" height="68" fill="#e9a72e"/><path d="M60 101 L142 42 M151 110 L256 42" stroke="#fff8e9" stroke-width="2" opacity=".6"/></g></svg></div><div class="project-info"><div class="project-topline"><span class="project-category">Research & colour</span><span class="project-arrow">↗</span></div><h3>A Colour Field Guide</h3><p>Everyday inspiration translated into a flexible palette.</p></div>
-        </button>
-        <button class="project-card" data-category="print" data-title="Little Things, Repeat" data-type="Print & pattern" data-desc="A repeat pattern built from tiny everyday objects and doodled shapes. The work plays with rhythm, scale and the happy accidents that make a print feel personal." data-tools="Doodling · Repeat construction · Scale tests">
-          <div class="project-art" style="background:#b5dce3"><svg viewBox="0 0 320 235" aria-hidden="true"><rect width="320" height="235" fill="#b5dce3"/><defs><pattern id="patt" width="80" height="75" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="12" fill="#e85345"/><path d="M45 7 L58 30 L35 29Z" fill="#f5cf4c"/><path d="M10 53 Q28 35 38 55 Q26 70 10 53Z" fill="#276b4b"/><rect x="48" y="43" width="20" height="17" rx="4" fill="#f9f0df" transform="rotate(12 48 43)"/></pattern></defs><rect width="320" height="235" fill="url(#patt)"/><rect x="20" y="20" width="280" height="195" fill="none" stroke="#fff8e9" stroke-width="2" stroke-dasharray="5 5"/></svg></div><div class="project-info"><div class="project-topline"><span class="project-category">Print & pattern</span><span class="project-arrow">↗</span></div><h3>Little Things, Repeat</h3><p>A playful repeat built from small, familiar details.</p></div>
-        </button>
-        <button class="project-card" data-category="surface" data-title="Soft Structure" data-type="Surface & material" data-desc="An experimental study of transparency, layering and the contrast between soft fabric and structured geometry. A starting point for accessories, panels or contemporary interiors." data-tools="Layering tests · Material pairing · Form exploration">
-          <div class="project-art" style="background:#d8c5df"><svg viewBox="0 0 320 235" aria-hidden="true"><rect width="320" height="235" fill="#d8c5df"/><rect x="38" y="34" width="145" height="166" fill="#f5c94d" opacity=".88" transform="rotate(-8 38 34)"/><rect x="115" y="24" width="150" height="172" fill="#4c8e80" opacity=".78" transform="rotate(9 115 24)"/><rect x="86" y="58" width="145" height="135" fill="#e56b59" opacity=".78" transform="rotate(3 86 58)"/><g stroke="#fff6e8" stroke-width="3" fill="none" opacity=".8"><path d="M45 100 H275 M45 125 H275 M45 150 H275"/><path d="M100 40 V200 M125 40 V200 M150 40 V200"/></g></svg></div><div class="project-info"><div class="project-topline"><span class="project-category">Surface & material</span><span class="project-arrow">↗</span></div><h3>Soft Structure</h3><p>Where fluid materials meet crisp, graphic forms.</p></div>
-        </button>
-        <button class="project-card" data-category="research" data-title="Found in the City" data-type="Research & colour" data-desc="A visual research diary collecting shapes, textures and colour combinations from the city. The exercise is about learning to notice: peeling paint, shopfront lettering, tiled floors and street-side flowers." data-tools="Field notes · Photography references · Moodboards">
-          <div class="project-art" style="background:#e8b9a4"><svg viewBox="0 0 320 235" aria-hidden="true"><rect width="320" height="235" fill="#e8b9a4"/><rect x="20" y="25" width="115" height="185" fill="#f7e8c9" transform="rotate(-4 20 25)"/><rect x="150" y="25" width="150" height="72" fill="#37735a" transform="rotate(4 150 25)"/><rect x="150" y="108" width="150" height="102" fill="#f2c943" transform="rotate(4 150 108)"/><path d="M40 60 H113 M40 72 H96 M40 84 H110" stroke="#d25b49" stroke-width="5"/><path d="M170 135 L205 112 L238 135 L270 111" stroke="#d25b49" stroke-width="8" fill="none"/><circle cx="78" cy="154" r="27" fill="#7fa9b7"/><circle cx="78" cy="154" r="11" fill="#f7e8c9"/><path d="M175 50 L200 70 L220 40 L250 67 L277 45" stroke="#f7e8c9" stroke-width="5" fill="none"/></svg></div><div class="project-info"><div class="project-topline"><span class="project-category">Research & colour</span><span class="project-arrow">↗</span></div><h3>Found in the City</h3><p>A visual diary of overlooked details and everyday colour.</p></div>
-        </button>
-      </div>
-    </section>
-    <section class="section" id="about">
-      <div class="about-grid">
-        <div class="about-note"><div class="big-quote">“</div><p>I believe good design starts with looking a little closer.</p><small>Vanshika · Textile design</small></div>
-        <div><div class="section-kicker">A note from the designer</div><h2 class="section-title" style="margin-bottom:24px">Curious by nature.<br><span style="color:var(--site-primary)">Textile by choice.</span></h2><div class="about-copy"><p>I’m interested in the way textiles shape how we experience the world: the memory in a print, the comfort of a texture, the mood a colour can set. My process moves between research, hands-on experiments and digital development.</p><p>I enjoy trying things, collecting references and finding the balance between an unexpected idea and a design that works in the real world.</p></div>
-          <div class="skills"><span class="skill">Surface pattern</span><span class="skill">Print development</span><span class="skill">Colour stories</span><span class="skill">Trend research</span><span class="skill">Moodboards</span><span class="skill">Material exploration</span><span class="skill">Adobe Illustrator*</span><span class="skill">Photoshop*</span></div>
-          <div class="timeline"><div class="timeline-item"><div class="timeline-date">Education</div><div><h3>Textile Design · [Institute / University]</h3><p>[Degree / course] · [Year–Year]. Replace this line with Vanshika’s actual education details.</p></div></div><div class="timeline-item"><div class="timeline-date">Experience</div><div><h3>[Internship / Studio / Project]</h3><p>[Organisation or project name] · [Dates]. Add relevant textile work, internships or collaborative projects here.</p></div></div><div class="timeline-item"><div class="timeline-date">Currently</div><div><h3>Collecting references & making samples</h3><p>Open to textile, print, surface-design and creative collaboration opportunities.</p></div></div></div>
-          <p style="font-size:.72rem;color:var(--muted);margin-top:12px">*Keep only the software and skills Vanshika genuinely uses.</p>
-        </div>
-      </div>
-    </section>
-    <section class="contact" id="contact"><div class="section-kicker" style="color:var(--site-secondary)">Next stop: something good</div><h2>Have a project<br>in <em>mind?</em></h2><p>I’d love to hear about a role, collaboration or idea that needs a little more colour and texture.</p><div class="contact-row"><button class="pill-button" id="emailBtn" type="button">Copy email address ↗</button><a class="email-link" href="mailto:vanshika@example.com" id="emailLink">vanshika@example.com</a></div><p style="font-size:.72rem;margin-top:30px;color:#a9a399">Replace the sample email and contact details before sharing this portfolio.</p></section>
-  </main>
-  <footer class="footer"><span>© <span id="year"></span> Vanshika · Textile Design</span><span>Made of ideas, colour & a little curiosity ✳</span><a href="#top" style="color:inherit;text-decoration:none">Back to top ↑</a></footer>
-</div>
-<div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close" id="modalClose" aria-label="Close project details">×</button><span class="project-category" id="modalType">PROJECT TYPE</span><h2 id="modalTitle">Project title</h2><p id="modalDesc"></p><div class="modal-note"><strong>Process / skills</strong><p id="modalTools" style="margin-bottom:0"></p></div></div></div>
-<div class="bill-backdrop" id="billModal" role="dialog" aria-modal="true" aria-labelledby="billTitle"><article class="cv-bill">
-  <div class="bill-top"><span class="bill-kicker">VANSHIKA'S CV STORE · RECEIPT NO. 001</span><button class="bill-close" id="billClose" type="button" aria-label="Close CV bill">×</button></div>
-  <h2 class="bill-title" id="billTitle">Vanshika<br>Makheja.</h2><p class="bill-subtitle">TEXTILE DESIGN · HOME ACCESSORIES</p><div class="selected-item-line"><span>SELECTED ITEM</span><strong id="billItem">PRINTED FABRIC SWATCH</strong></div>
-  <section class="bill-section" data-section="PROFILE"><h3>01 / THE DESIGNER</h3><p>Creative and curious design student with an interest in textiles, print, surface exploration and visual storytelling. I enjoy experimenting with colours, patterns and different techniques while finding inspiration in everyday surroundings, culture and visual experiences. I am always interested in experimenting, trying out new things and exploring different ideas to expand my creative perspective.</p></section>
-  <section class="bill-section" data-section="EDUCATION"><h3>02 / EDUCATION</h3><p><strong>Bachelor of Design</strong><br>National Institute of Fashion Technology, New Delhi<br>2024–2028</p><p><strong>Multimedia and Mass Communication</strong><br>Indraprastha College for Women, University of Delhi<br>2023–2024</p><p><strong>Senior Secondary</strong><br>JB Academy, Ayodhya · 2023</p></section>
-  <section class="bill-section" data-section="SKILLS"><h3>03 / SKILLS & TOOLS</h3>
-    <div class="skill-group"><h4 class="skill-group-title">Textile & hand skills / made by hand</h4><div class="skill-sticker-grid">
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M4 7H36M4 15H36M4 23H36M4 31H36M8 4V32M16 4V32M24 4V32M32 4V32"/><path d="M5 11L35 27M5 27L35 11" stroke="#d94760"/></svg></span><strong>Weaving</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M9 29L28 6Q31 3 34 6Q36 9 33 12L14 31Z"/><path d="M8 28L14 31M12 23L17 26M17 17L22 20M22 12L27 15"/><circle cx="8" cy="29" r="4"/><path d="M25 28Q31 22 35 28Q31 33 25 28Z"/></svg></span><strong>Embroidery</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M7 5C14 12 2 16 9 23S10 31 6 32M20 4C27 12 15 19 22 25S23 31 20 32M31 5C38 12 26 19 33 25" stroke="#d94760"/><path d="M4 9H36M4 20H36M4 30H36" stroke="#437b64"/></svg></span><strong>Tie & dye</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M4 31L8 7L31 4L36 27Z"/><path d="M8 7L36 27M31 4L4 31" stroke="#c84848"/><circle cx="20" cy="18" r="5"/><path d="M20 10V6M20 30V26M12 18H8M32 18H28"/></svg></span><strong>Print making</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M5 10L20 4L35 10L20 17Z"/><path d="M5 10V27L20 33L35 27V10M20 17V33"/><path d="M11 13L20 17L29 13" stroke="#c84848"/></svg></span><strong>Material handling</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M7 30L26 8L32 13L12 32Z"/><path d="M25 8L29 4L35 10L32 13"/><path d="M5 33L11 31M7 25L13 29"/><path d="M5 5L9 9M4 12L9 12" stroke="#d94760"/></svg></span><strong>Drawing</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M7 28Q9 15 20 7Q31 15 33 28Z"/><path d="M20 8V29M12 15L20 21L28 15M10 24L20 29L30 24" stroke="#437b64"/><circle cx="20" cy="7" r="3"/></svg></span><strong>Surface embellishment</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle"><svg viewBox="0 0 40 36"><path d="M8 4L18 21Q20 25 16 29L11 33M32 4L22 21Q20 25 24 29L29 33"/><circle cx="8" cy="5" r="4"/><circle cx="32" cy="5" r="4"/><path d="M17 27L23 27" stroke="#d94760"/></svg></span><strong>Sewing</strong></div>
-    </div></div>
-    <div class="skill-group"><h4 class="skill-group-title">Creative skills / visual thinking</h4><div class="skill-sticker-grid">
-      <div class="skill-sticker"><span class="skill-doodle">📷</span><strong>Photography</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle">🎬</span><strong>Video editing</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle">✍</span><strong>Creative writing</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle">🧩</span><strong>Problem solving</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle">🎤</span><strong>Public speaking</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle">🏺</span><strong>Ceramics</strong></div>
-      <div class="skill-sticker"><span class="skill-doodle">🖋</span><strong>Calligraphy</strong></div>
-    </div></div>
-    <div class="skill-group"><h4 class="skill-group-title">Digital tools / design software</h4><div class="skill-sticker-grid">
-      <div class="skill-sticker software-sticker"><span class="software-mark">Id</span><strong>Adobe<br>InDesign</strong></div>
-      <div class="skill-sticker software-sticker"><span class="software-mark">Ai</span><strong>Adobe<br>Illustrator</strong></div>
-      <div class="skill-sticker software-sticker"><span class="software-mark">Ps</span><strong>Adobe<br>Photoshop</strong></div>
-    </div></div>
-  </section>
-  <section class="bill-section" data-section="EXPERIENCE"><h3>04 / EXPERIENCE</h3><ul><li>Campus Ambassador, TEDx Hindu College · 2026</li><li>Member, Film & Photography Club at NIFT Delhi</li><li>Volunteered in curating a stall for the Chaap event, NIFT Delhi × Delhi Haat</li><li>Former member, Croydon Fine Arts Club, Indraprastha College for Women · 2024</li><li>Former member, Organising Committee, Lights Camera Action · 2024</li><li>Virtual Intern, Humari Pahchaan · 2023</li><li>HR Intern, eSF · 2021</li><li>Content Writing Intern, Team Everest · 2021</li><li>Social Media Management Intern, Internshala · 2021</li></ul></section>
-  <section class="bill-section" data-section="PROJECTS"><h3>05 / SELECTED WORK</h3><p><strong>Ajrakh Printing Craft Research Document · NIFT project, 2026</strong><br>Publication design, document compilation and photography for a craft research document on Ajrakh printing.</p><p><strong>LIVA × NIFT Integrated Project</strong><br>Worked on design process and surface embellishment.</p></section>
-  <section class="bill-section" data-section="CONTACT"><h3>06 / GET IN TOUCH</h3><p><strong>Email:</strong> vanshika.makheja@nift.ac.in</p><p><strong>Location:</strong> Delhi, India</p></section>
-  <div class="selected-item-line"><span>CREATIVITY</span><strong>ALWAYS IN PROGRESS ✳</strong></div><p class="bill-warning">This receipt shows only the CV section linked to the textile item you selected.</p>
-  <div class="bill-barcode" aria-hidden="true"></div><div class="bill-barcode-label">VANSHIKA MAKHEJA · TEXTILE DESIGN · CV 001</div><p class="bill-thanks">THANK YOU FOR LOOKING ✳</p>
-  <div class="bill-actions"><button class="bill-button secondary" id="billCloseBottom" type="button">BACK TO CART</button><button class="bill-button" id="billPrint" type="button">PRINT / SAVE AS PDF ↗</button></div>
-</article></div>
-<div class="toast" id="toast" role="status">Copied!</div>
-<script>
-const filters = document.querySelectorAll('.filter');
-const cards = [...document.querySelectorAll('.project-card')];
-filters.forEach(filter => filter.addEventListener('click', () => {
-  filters.forEach(item => item.classList.toggle('active', item === filter));
-  const value = filter.dataset.filter;
-  cards.forEach(card => { card.hidden = value !== 'all' && card.dataset.category !== value; });
-}));
-const modal = document.getElementById('projectModal');
-const closeModal = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
-cards.forEach(card => card.addEventListener('click', () => {
-  document.getElementById('modalType').textContent = card.dataset.type;
-  document.getElementById('modalTitle').textContent = card.dataset.title;
-  document.getElementById('modalDesc').textContent = card.dataset.desc;
-  document.getElementById('modalTools').textContent = card.dataset.tools;
-  modal.classList.add('open'); document.body.style.overflow = 'hidden'; document.getElementById('modalClose').focus();
-}));
-document.getElementById('modalClose').addEventListener('click', closeModal);
-modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
-document.addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });
-document.querySelectorAll('.cart-tile').forEach(tile => tile.addEventListener('click', () => {
-  document.getElementById('modalType').textContent = tile.dataset.type;
-  document.getElementById('modalTitle').textContent = tile.dataset.title;
-  document.getElementById('modalDesc').textContent = tile.dataset.desc;
-  document.getElementById('modalTools').textContent = tile.dataset.tools;
-  modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('modalClose').focus();
-}));
-document.getElementById('printBtn').addEventListener('click', () => window.print());
-const billModal = document.getElementById('billModal');
-function closeBill() { billModal.classList.remove('open'); document.body.style.overflow = ''; }
-document.querySelectorAll('.textile-item').forEach(item => item.addEventListener('click', () => {
-  document.getElementById('billItem').textContent = item.dataset.item.toUpperCase();
-  const billTitles = { PROFILE: 'The Designer', SKILLS: 'Skills & Tools', EDUCATION: 'Education', EXPERIENCE: 'Experience', PROJECTS: 'Selected Work', CONTACT: 'Get in Touch' };
-  document.getElementById('billTitle').textContent = billTitles[item.dataset.section] || 'Vanshika Makheja';
-  document.querySelectorAll('.bill-section').forEach(section => section.classList.toggle('active', section.dataset.section === item.dataset.section));
-  billModal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('billClose').focus();
-}));
-document.getElementById('billClose').addEventListener('click', closeBill);
-document.getElementById('billCloseBottom').addEventListener('click', closeBill);
-billModal.addEventListener('click', event => { if (event.target === billModal) closeBill(); });
-document.getElementById('billPrint').addEventListener('click', () => window.print());
-document.addEventListener('keydown', event => { if (event.key === 'Escape') closeBill(); });
-const toast = document.getElementById('toast');
-function showToast(message) { toast.textContent = message; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2100); }
-document.getElementById('emailBtn').addEventListener('click', async () => {
-  const email = document.getElementById('emailLink').textContent.trim();
-  try { await navigator.clipboard.writeText(email); showToast('Email copied to clipboard'); }
-  catch { showToast('Sample email: ' + email); }
-});
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+
+/* Mobile layout */
+@media(max-width:700px) {
+  .cart-page-header { align-items:flex-start; flex-direction:column; gap:8px; }
+  .cart-header-note { max-width:none; text-align:left; line-height:1.45; }
+  .textile-inventory { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
+  .textile-item { min-height:158px; padding:9px; }
+  .item-visual { height:76px; margin:15px 0 10px; }
+  .item-caption { font-size:.54rem; }
+  .trolley-lower { align-items:flex-start; flex-direction:column; gap:9px; }
+  .trolley-wheels { width:64%; }
+  .cart-page-footer { align-items:flex-start; flex-direction:column; gap:7px; padding:0 6px; }
+  .cart-page-footer span { max-width:none; }
+  .selected-item-line { flex-wrap:wrap; }
+}
+
+@media(max-width:430px) {
+  #cart-page { padding-left:12px; padding-right:12px; padding-bottom:24px; }
+  .cart-header-note { font-size:.68rem; }
+  .trolley-topline { flex-wrap:wrap; gap:6px; letter-spacing:.04em; }
+  .trolley-scene { padding-left:0; padding-right:0; padding-bottom:32px; }
+  .textile-inventory { gap:7px; }
+  .textile-item { min-height:150px; padding:8px; }
+  .item-visual { height:68px; margin:17px 0 9px; }
+  .item-caption { font-size:.5rem; letter-spacing:.07em; }
+  .item-number { right:7px; bottom:6px; font-size:.58rem; }
+  .bill-close { width:44px; height:44px; }
+  .cv-bill { max-height:90vh; padding:18px 14px 28px; }
+  .bill-actions { flex-direction:column; }
+  .bill-button { width:100%; min-height:44px; }
+}
